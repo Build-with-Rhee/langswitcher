@@ -1,0 +1,37 @@
+name: Build and verify
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --cache "${{ runner.temp }}/npm-cache"
+      - run: npm test
+      - run: npm run evaluate -- --regression
+      - run: npm run desktop:build
+      - run: npm run downloads
+      - run: npm run build
+      - name: Native Electron functionality
+        run: node scripts/smoke-desktop.mjs
+      - name: Browser integration checks
+        shell: pwsh
+        run: |
+          npx playwright install chromium
+          $env:CHROMIUM_PATH = (node -e "console.log(require('playwright').chromium.executablePath())")
+          npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LangSwitcher-Windows-and-Web
+          path: |
+            release/*.exe
+            public/downloads/manifest.json
+            dist/

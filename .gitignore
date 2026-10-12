@@ -1,0 +1,12 @@
+node_modules/
+.npm-cache/
+dist/
+release/
+test-results/
+playwright-report/
+.superpowers/
+public/downloads/*.exe
+public/downloads/manifest.json
+*.log
+.env
+.env.*

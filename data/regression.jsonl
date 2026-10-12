@@ -1,0 +1,16 @@
+{"id":"s01","direction":"south-to-north","input":"노동자는 내일 여행을 갑니다.","expected":"로동자는 래일 려행을 갑니다."}
+{"id":"s02","direction":"south-to-north","input":"여자 친구와 옥수수를 먹어요.","expected":"녀자 동무와 강냉이를 먹어요."}
+{"id":"s03","direction":"south-to-north","input":"이론과 논리를 공부합니다.","expected":"리론과 론리를 공부합니다."}
+{"id":"s04","direction":"south-to-north","input":"햇빛 아래 나뭇잎이 있습니다.","expected":"해빛 아래 나무잎이 있습니다."}
+{"id":"s05","direction":"south-to-north","input":"여름 노래와 아름다운 이야기", "expected":"여름 노래와 아름다운 이야기"}
+{"id":"s06","direction":"south-to-north","input":"컴퓨터와 휴대전화", "expected":"콤퓨터와 손전화"}
+{"id":"s07","direction":"south-to-north","input":"할 수 있습니다.","expected":"할수 있습니다."}
+{"id":"s08","direction":"south-to-north","input":"냉면과 채소를 먹습니다.","expected":"랭면과 남새를 먹습니다."}
+{"id":"n01","direction":"north-to-south","input":"로동자는 래일 려행을 갑니다.","expected":"노동자는 내일 여행을 갑니다."}
+{"id":"n02","direction":"north-to-south","input":"녀자 동무와 강냉이를 먹어요.","expected":"여자 친구와 옥수수를 먹어요."}
+{"id":"n03","direction":"north-to-south","input":"리론과 론리를 공부합니다.","expected":"이론과 논리를 공부합니다."}
+{"id":"n04","direction":"north-to-south","input":"해빛 아래 나무잎이 있습니다.","expected":"햇빛 아래 나뭇잎이 있습니다."}
+{"id":"n05","direction":"north-to-south","input":"여름 노래와 아름다운 이야기", "expected":"여름 노래와 아름다운 이야기"}
+{"id":"n06","direction":"north-to-south","input":"콤퓨터와 손전화", "expected":"컴퓨터와 휴대전화"}
+{"id":"n07","direction":"north-to-south","input":"할수 있습니다.","expected":"할 수 있습니다."}
+{"id":"n08","direction":"north-to-south","input":"랭면과 남새를 먹습니다.","expected":"냉면과 채소를 먹습니다."}

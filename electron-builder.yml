@@ -1,0 +1,39 @@
+appId: io.langswitcher.malsai
+productName: LangSwitcher
+directories:
+  output: release
+files:
+  - dist/**/*
+  - '!dist/downloads/**'
+  - '!node_modules/**'
+  - electron/*.cjs
+  - electron/icons/icon.ico
+  - package.json
+asar: true
+npmRebuild: false
+compression: normal
+toolsets:
+  wine: '1.0.1'
+win:
+  icon: electron/icons/icon.ico
+  target:
+    - target: portable
+      arch: [x64]
+    - target: nsis
+      arch: [x64]
+  signAndEditExecutable: false
+  artifactName: LangSwitcher-${version}-${arch}-nsis.${ext}
+nsis:
+  installerIcon: electron/icons/icon.ico
+  uninstallerIcon: electron/icons/icon.ico
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 말사이
+  displayLanguageSelector: false
+  language: '1042'
+  deleteAppDataOnUninstall: false
+portable:
+  artifactName: LangSwitcher-${version}-${arch}-portable.${ext}

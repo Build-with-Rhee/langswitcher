@@ -1,0 +1,44 @@
+{
+  "name": "langswitcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline, explainable Standard Korean ↔ Munhwaŏ rule-based converter",
+  "author": "LangSwitcher contributors",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "evaluate": "tsx scripts/evaluate.ts",
+    "desktop": "npm run build && electron .",
+    "desktop:build": "npm run build && node scripts/build-desktop.mjs",
+    "downloads": "node scripts/prepare-downloads.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "5.3.0",
+    "@fontsource-variable/noto-sans-kr": "5.3.1",
+    "lucide-react": "1.55.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  }
+}
